@@ -1,0 +1,56 @@
+
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+</script>
+
+
+<section class = "row">
+	<section class = "col-sm-8 col-xs-12">
+		<h1>Edit Post</h1>
+		<form role="form" action="/admin/posts/{{post._id}}" method="post">
+		    <div class="form-group">
+		        <label for="title">Title</label>
+		        <input id="title" class="form-control" name="title" value="{{post.title}}">
+		    </div>
+		    <div class="form-group">
+		        <label for="date">Title</label>
+		        <input id="date" class="form-control" name="date" value="{{post.date}}">
+		    </div>
+		    <div class="form-group">
+		        <label for="author">Author</label>
+		        <input id="author" class="form-control" name="author" value="{{post.author}}">
+		    </div>
+		    <div class="form-group">
+		        <label for="post-body">Post Body</label>
+		        <textarea class="form-control" id="post-body" name="body">{{post.body}}</textarea>
+		    </div>
+		    <button type="submit" class="btn btn-default">Update</button>
+		</form>
+	</section>
+</section>
+
+<!-- <script src="//cdn.ckeditor.com/4.4.4/standard/ckeditor.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+<script>
+	function CKupdate(){
+	    for ( instance in CKEDITOR.instances )
+	        CKEDITOR.instances[instance].updateElement();
+	}
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'post-body' );
+    $( 'form' ).ajaxSubmit( {
+	    beforeSubmit: function() {
+	        CKupdate();
+	    }
+} );
+</script> -->

@@ -1,0 +1,11 @@
+<section class = "row">
+{{#each posts}}
+	<div class = "col-xs-12">
+		<h3><a href="/admin/posts/{{_id}}">{{title}}</a></h3>
+		<p>Published: {{date}}</p>
+		<p>Author: {{author}}</p>
+		<a href = "/admin/posts/{{_id}}/delete">Delete</a>
+		<a href = "/admin/posts/{{_id}}">View/Edit</a>
+	</div>
+{{/each}}
+</section>

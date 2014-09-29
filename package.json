@@ -1,0 +1,11 @@
+{
+	"name": "coooookiees",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "4.*",
+		"express-session": "1.*",
+		"express-handlebars":"*",
+		"body-parser":"1.*",
+		"mongoose": "3.*"
+	}
+}
